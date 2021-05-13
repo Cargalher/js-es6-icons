@@ -4,7 +4,7 @@ Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disp
 const iconsList  = [
 	{
 		name: 'cat',
-		prefix: 'fa-',
+		prefix: 'fa-cat',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
@@ -12,105 +12,105 @@ const iconsList  = [
 	},
 	{
 		name: 'crow',
-		prefix: 'fa-',
+		prefix: 'fa-crow',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'dog',
-		prefix: 'fa-',
+		prefix: 'fa-dog',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'dove',
-		prefix: 'fa-',
+		prefix: 'fa-dove',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'dragon',
-		prefix: 'fa-',
+		prefix: 'fa-dragon',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'horse',
-		prefix: 'fa-',
+		prefix: 'fa-horse',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'hippo',
-		prefix: 'fa-',
+		prefix: 'fa-hippo',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'fish',
-		prefix: 'fa-',
+		prefix: 'fa-fish',
 		type: 'animal',
 		family: 'fas',
         color: 'blue'
 	},
 	{
 		name: 'carrot',
-		prefix: 'fa-',
+		prefix: 'fa-carrot',
 		type: 'vegetable',
 		family: 'fas',
         color: 'orange'
 	},
 	{
 		name: 'apple-alt',
-		prefix: 'fa-',
+		prefix: 'fa-apple-alt',
 		type: 'vegetable',
 		family: 'fas',
         color: 'orange'
 	},
 	{
 		name: 'lemon',
-		prefix: 'fa-',
+		prefix: 'fa-lemon',
 		type: 'vegetable',
 		family: 'fas',
         color: 'orange'
 	},
 	{
 		name: 'pepper-hot',
-		prefix: 'fa-',
+		prefix: 'fa-pepper-hot',
 		type: 'vegetable',
 		family: 'fas',
         color: 'orange'
 	},
 	{
 		name: 'user-astronaut',
-		prefix: 'fa-',
+		prefix: 'fa-user-astronaut',
 		type: 'user',
 		family: 'fas',
         color: 'purple'
 	},
 	{
 		name: 'user-graduate',
-		prefix: 'fa-',
+		prefix: 'fa-user-graduate',
 		type: 'user',
 		family: 'fas',
         color: 'purple'
 	},
 	{
 		name: 'user-ninja',
-		prefix: 'fa-',
+		prefix: 'fa-user-ninja',
 		type: 'user',
 		family: 'fas',
         color: 'purple'
 	},
 	{
 		name: 'user-secret',
-		prefix: 'fa-',
+		prefix: 'fa-user-secret',
 		type: 'user',
 		family: 'fas',
         color: 'purple'
@@ -122,9 +122,11 @@ iconsList.forEach((icon) => {
     document.getElementById('container').insertAdjacentHTML('beforeend', 
     `
         <div class ="icon">
-            <i class="fas fa-cat" style="color: ${icon.color}"></i>
+            <i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
             <h3>${icon.name}</h3>
         </div>
+        
+        
     `)
 });
 
