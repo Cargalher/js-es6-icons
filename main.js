@@ -138,11 +138,10 @@ iconsList.forEach((icon) => {
 
 const filtra = document.getElementById('types_icons').value;
 
+
+/*
 const iconClass = iconsList.filter((icon) => {
-    if(value === animal){
-        return true;
-    }else if(value===vegetable){
-        return true;
-    }else if(value===user)
-        return true;
-    });
+    if(value === all || value ===animal || value ===vegetables || value === user){
+
+    }
+    */

@@ -35,6 +35,7 @@ background-color: white;
     border-radius: 5px;
     white-space: nowrap;
     padding: 33px 0;
+    /* display: none; */
 }
 .fa, .fas  {
     font-size: 20px;
