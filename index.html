@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js_es6 | icons</title>
-    <link rel="stylesheet" href="style.css">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>List of Icons</h1>
-    <section id="container">
+    <h1 class="container">FontIcons</h1>
+    <header id="site_header">
+        <div class="filtra">
+            <label for="types_icons">filtra per tipo</label>
+            <select class="" name="types_icons" id="types_icons">
+              <option value="all" id="all">all</option>
+              <option value="animal" id="animal">animal</option>
+              <option value="vegetables" id="vegetables">vegetables</option>
+              <option value="user" id="senior">user</option>
+            </select>
+        </div>
+    </header>
+    <main id="site_main">
+        <section id="container">
+                <!-- container with all the icons -->
+            </section>
+    </main>
 
-    </section>
+    
     <script src="./main.js"></script>
 </body>
 </html>

@@ -6,7 +6,9 @@ const iconsList  = [
 		name: 'cat',
 		prefix: 'fa-',
 		type: 'animal',
-		family: 'fas'
+		family: 'fas',
+        color: 'blue'
+        
 	},
 	{
 		name: 'crow',
@@ -102,15 +104,14 @@ const iconsList  = [
 
 iconsList.forEach((icon) => {
    
-    document.getElementById("container").insertAdjacentElement('beforeend', 
+    document.getElementById('container').insertAdjacentHTML('beforeend', 
     `
         <div class ="icon">
-            <i class="fas fa-cat"></i>
+            <i class="fas fa-cat" style="color: ${icon.color}"></i>
             <h3>${icon.name}</h3>
         </div>
-    `
-    )
-})
+    `)
+});
 
 /*   Milestone 2 Coloriamo le icone per tipo   */
 
