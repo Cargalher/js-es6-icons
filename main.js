@@ -139,9 +139,15 @@ iconsList.forEach((icon) => {
 const filtra = document.getElementById('types_icons').value;
 
 
-/*
-const iconClass = iconsList.filter((icon) => {
-    if(value === all || value ===animal || value ===vegetables || value === user){
 
-    }
-    */
+const iconClass = iconsList.filter((icon) => {
+        if(value === 'all'){
+            document.getElementById('types_icons').innerHTML = value;
+        }else if(value === 'animal'){
+            document.getElementById('types_icons').innerHTML = value;
+        }else if(value === 'vegetables'){
+            document.getElementById('types_icons').innerHTML = value;
+        }else if(value === 'user'){
+            document.getElementById('types_icons').innerHTML = value;
+        };
+    });
