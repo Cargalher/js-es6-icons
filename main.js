@@ -117,6 +117,8 @@ const iconsList  = [
 	}
 ];
 
+
+/*   Milestone 2 Coloriamo le icone per tipo   */
 iconsList.forEach((icon) => {
    
     document.getElementById('container').insertAdjacentHTML('beforeend', 
@@ -130,10 +132,17 @@ iconsList.forEach((icon) => {
     `)
 });
 
-/*   Milestone 2 Coloriamo le icone per tipo   */
-
-
-
-
 
 /*   Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone   */
+
+
+const filtra = document.getElementById('types_icons').value;
+
+const iconClass = iconsList.filter((icon) => {
+    if(value === animal){
+        return true;
+    }else if(value===vegetable){
+        return true;
+    }else if(value===user)
+        return true;
+    });
