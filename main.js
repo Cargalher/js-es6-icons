@@ -136,18 +136,33 @@ iconsList.forEach((icon) => {
 /*   Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone   */
 
 
-const filtra = document.getElementById('types_icons').value;
-
-
-
-const iconClass = iconsList.filter((icon) => {
-        if(value === 'all'){
-            document.getElementById('types_icons').innerHTML = value;
-        }else if(value === 'animal'){
-            document.getElementById('types_icons').innerHTML = value;
-        }else if(value === 'vegetables'){
-            document.getElementById('types_icons').innerHTML = value;
-        }else if(value === 'user'){
-            document.getElementById('types_icons').innerHTML = value;
-        };
+document.addEventListener('change', function(){
+    document.getElementById('container').insertAdjacentHTML('beforeend', 
+    `
+        <div class ="icon">
+            <i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
+            <h3>${icon.name}</h3>
+        </div>
+        
+        
+    `)
+    const iconClass = iconsList.filter((icon) => {
+       if (value = all){
+            document.getElementById('all').value
+       }else if( value = animal){
+            document.getElementById('animal').value 
+       }else if(value = vegetables){
+            document.getElementById('vegetables').value
+       }else if(value = user){
+            document.getElementById('user').value
+       }
     });
+  });
+
+
+
+
+
+
+
+  

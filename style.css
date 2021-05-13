@@ -6,6 +6,7 @@
 #container{
     display: flex;
     flex-wrap: wrap;
+    
 }
 h1{
 color: rgb(111, 185, 235);
