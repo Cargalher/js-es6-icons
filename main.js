@@ -119,46 +119,53 @@ const iconsList  = [
 
 
 /*   Milestone 2 Coloriamo le icone per tipo   */
-iconsList.forEach((icon) => {
+// iconsList.forEach((icon) => {
    
-    document.getElementById('container').insertAdjacentHTML('beforeend', 
-    `
-        <div class ="icon">
-            <i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
-            <h3>${icon.name}</h3>
-        </div>
+//     document.getElementById('container').insertAdjacentHTML('beforeend', 
+//     `
+//         <div class ="icon">
+//             <i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
+//             <h3>${icon.name}</h3>
+//         </div>
         
         
-    `)
-});
+//     `)
+// });
 
 
 /*   Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone   */
 
 
-document.getElementById('types_icons').addEventListener('change', functionFilter())
+document.getElementById('types_icons').addEventListener('change', functionFilter)
 
-function functionFilter () {
-    document.getElementById('container').insertAdjacentHTML('beforeend', 
-    `
-        <div class ="icon">
-            <i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
-            <h3>${icon.name}</h3>
-        </div>
-        
-        
-    `)
-    const value = document.getElementById('types_icons').value;
+function functionFilter() {
+	document.getElementById('container').innerHTML = "";
 
-    const iconClass = iconsList.filter((icon) => {
-       if (value = 'all'){
-            document.getElementById('all').value
-       }else if( value = 'animal'){
-            document.getElementById('animal').value 
-       }else if(value = 'vegetables'){
-            document.getElementById('vegetables').value
-       }else if(value = 'user'){
-            document.getElementById('user').value
-       }
-    });
-  };
+	iconsList.forEach((icon) => {
+		
+		const selectValue = document.getElementById('types_icons').value;
+
+		if(icon.type == selectValue || selectValue == 'all') {
+			document.getElementById('container').insertAdjacentHTML('beforeend', 
+			`
+				<div class="icon">
+					<i class="${icon.family} ${icon.prefix} " style="color: ${icon.color}"></i>
+					<h3>${icon.name}</h3>
+				</div>
+			`)
+		}
+	});
+
+    // const iconClass = iconsList.filter((icon) => {
+    //    if (value = 'all'){
+    //         document.getElementById('all').value
+    //    }else if( value = 'animal'){
+    //         document.getElementById('animal').value 
+    //    }else if(value = 'vegetables'){
+    //         document.getElementById('vegetables').value
+    //    }else if(value = 'user'){
+    //         document.getElementById('user').value
+    //    }
+    // });
+  }
+  functionFilter()
