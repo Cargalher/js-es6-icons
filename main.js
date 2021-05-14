@@ -136,7 +136,9 @@ iconsList.forEach((icon) => {
 /*   Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone   */
 
 
-document.addEventListener('change', function(){
+document.getElementById('types_icons').addEventListener('change', functionFilter())
+
+function functionFilterv () {
     document.getElementById('container').insertAdjacentHTML('beforeend', 
     `
         <div class ="icon">
@@ -146,23 +148,17 @@ document.addEventListener('change', function(){
         
         
     `)
+    const value = document.getElementById('types_icons').value;
+
     const iconClass = iconsList.filter((icon) => {
-       if (value = all){
+       if (value = 'all'){
             document.getElementById('all').value
-       }else if( value = animal){
+       }else if( value = 'animal'){
             document.getElementById('animal').value 
-       }else if(value = vegetables){
+       }else if(value = 'vegetables'){
             document.getElementById('vegetables').value
-       }else if(value = user){
+       }else if(value = 'user'){
             document.getElementById('user').value
        }
     });
-  });
-
-
-
-
-
-
-
-  
+  };
