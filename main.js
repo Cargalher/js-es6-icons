@@ -138,7 +138,7 @@ iconsList.forEach((icon) => {
 
 document.getElementById('types_icons').addEventListener('change', functionFilter())
 
-function functionFilterv () {
+function functionFilter () {
     document.getElementById('container').insertAdjacentHTML('beforeend', 
     `
         <div class ="icon">
